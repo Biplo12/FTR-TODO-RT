@@ -18,6 +18,6 @@ const globalSlice = createSlice({
   },
 });
 
-export const {} = globalSlice.actions;
+export const { addTodo, removeTodo } = globalSlice.actions;
 
 export default globalSlice.reducer;
