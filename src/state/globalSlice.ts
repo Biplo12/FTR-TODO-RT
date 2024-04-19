@@ -13,11 +13,22 @@ const globalSlice = createSlice({
       state.todos.push(action.payload);
     },
     removeTodo: (state, action: PayloadAction<number>) => {
-      state.todos.splice(action.payload, 1);
+      const index = state.todos.findIndex((todo) => todo.id === action.payload);
+
+      if (index !== -1) {
+        state.todos.splice(index, 1);
+      }
+    },
+    completeTodo: (state, action: PayloadAction<number>) => {
+      const todo = state.todos.find((todo) => todo.id === action.payload);
+
+      if (todo) {
+        todo.isCompleted = !todo.isCompleted;
+      }
     },
   },
 });
 
-export const { addTodo, removeTodo } = globalSlice.actions;
+export const { addTodo, removeTodo, completeTodo } = globalSlice.actions;
 
 export default globalSlice.reducer;
