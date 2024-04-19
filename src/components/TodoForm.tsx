@@ -30,7 +30,7 @@ const TodoForm: React.FC = (): JSX.Element => {
   };
 
   return (
-    <div className="flex w-full max-w-xl relative items-center justify-center h-full">
+    <div className="flex w-full max-w-2xl relative items-center justify-center h-full">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
           <FormField

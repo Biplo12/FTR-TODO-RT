@@ -11,7 +11,7 @@ const TodoList: React.FC = (): JSX.Element => {
 
   if (!todos.length) {
     return (
-      <div className="w-full max-w-xl flex flex-col items-start justify-start">
+      <div className="w-full max-w-2xl flex flex-col items-start justify-start">
         <h1 className="text-gray-300 text-xl">No todos found</h1>
         <p className="text-muted-foreground">
           You can add a todo by typing in the input field and pressing the enter
@@ -22,7 +22,7 @@ const TodoList: React.FC = (): JSX.Element => {
   }
 
   return (
-    <div className="w-full max-w-xl flex flex-col items-start justify-start">
+    <div className="w-full max-w-2xl flex flex-col items-start justify-start">
       <div className="flex items-center justify-between w-full gap-2">
         <h1 className="text-gray-300">
           <span className="text-muted-foreground">

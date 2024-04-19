@@ -11,7 +11,7 @@ const TodoItem: React.FC<ITodoItem> = ({ todo }): JSX.Element => {
   const { handleCompleteTodo, handleDeleteTodo } = useTasks();
 
   return (
-    <div className="flex items-center justify-between w-full py-2">
+    <div className="flex items-center justify-between w-full py-2 gap-2">
       <div className="flex items-center gap-2">
         <button onClick={() => handleCompleteTodo(todo.id)}>
           {todo.isCompleted ? (
