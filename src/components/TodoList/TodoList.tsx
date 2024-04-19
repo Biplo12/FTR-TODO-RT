@@ -23,13 +23,18 @@ const TodoList: React.FC = (): JSX.Element => {
 
   return (
     <div className="w-full max-w-xl flex flex-col items-start justify-start">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center justify-between w-full gap-2">
         <h1 className="text-gray-300">
-          ToDo List <span>{todos.length} items</span>
+          <span className="text-muted-foreground">
+            {todos.length} {todos.length === 1 ? "item" : "items"}
+          </span>
         </h1>
-        <p>-</p>
-        <h2 className="text-gray-300">
-          Completed <span>{completedTodos.length} items</span>
+        <h2 className="text-muted-foreground">
+          Completed{" "}
+          <span>
+            {completedTodos.length}{" "}
+            {completedTodos.length === 1 ? "item" : "items"}
+          </span>
         </h2>
       </div>
       <Separator />
